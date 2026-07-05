@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rela-she-on - AI Relationship & Romance Mentor</title>
+  <meta name="description" content="Temukan solusi percintaan dan hubungan asmaramu bersama Rela-she-on, AI Relationship Mentor yang siap mendengarkan dan memberikan saran terbaik." />
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Decorative Animated Background Blobs -->
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <div class="app-container">
+    <!-- Header Section -->
+    <header class="app-header">
+      <div class="header-logo">
+        <a href="index.html" class="logo-icon" aria-label="Kembali ke beranda" style="text-decoration:none;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+        </a>
+        <div class="logo-text">
+          <h1>Rela-she-on</h1>
+          <span class="tagline">Your AI Relationship Mentor</span>
+        </div>
+      </div>
+
+      <!-- Tone Selector Segmented Control -->
+      <div class="tone-control">
+        <span class="tone-label">Pilih Tone AI:</span>
+        <div class="tone-options">
+          <button type="button" class="tone-btn active" data-tone="empathetic" id="tone-empathetic">
+            <span class="emoji">💕</span> Empatis
+          </button>
+          <button type="button" class="tone-btn" data-tone="realistic" id="tone-realistic">
+            <span class="emoji">🧠</span> Realistis
+          </button>
+          <button type="button" class="tone-btn" data-tone="playful" id="tone-playful">
+            <span class="emoji">😉</span> Humoris
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Chat Workspace -->
+    <main class="chat-workspace">
+      <div id="chat-box" class="chat-box">
+        <!-- Landing State (shown initially) -->
+        <div id="landing-state" class="landing-state">
+          <div class="avatar-pulsing">
+            <div class="avatar-ring"></div>
+            <div class="avatar-core">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </div>
+          </div>
+          <h2>Cerita ke Rela-she-on...</h2>
+          <p>Butuh saran romansa? Tanyakan apa saja seputar PDKT, pacaran, konflik hubungan, atau sekadar curhat emosional.</p>
+
+          <!-- Quick Starters Grid -->
+          <div class="quick-starters">
+            <div class="starter-card" data-message="Bagaimana cara memulai obrolan yang natural dengan gebetan (crush) saya?">
+              <div class="card-icon">💬</div>
+              <div class="card-title">Memulai Obrolan</div>
+              <div class="card-desc">Tips PDKT awal anti canggung.</div>
+            </div>
+            <div class="starter-card" data-message="Bagaimana cara baikan setelah berantem hebat karena salah paham dengan pacar?">
+              <div class="card-icon">💔</div>
+              <div class="card-title">Baikan Setelah Konflik</div>
+              <div class="card-desc">Resolusi damai pasca berselisih.</div>
+            </div>
+            <div class="starter-card" data-message="Apa saja tanda-tanda kalau seseorang diam-diam menyukai atau tertarik pada kita?">
+              <div class="card-icon">👀</div>
+              <div class="card-title">Tanda Dia Suka</div>
+              <div class="card-desc">Cara membaca sinyal ketertarikan.</div>
+            </div>
+            <div class="starter-card" data-message="Minta ide topik pembicaraan seru dan mendalam saat teleponan di malam hari!">
+              <div class="card-icon">📞</div>
+              <div class="card-title">Topik Deep Talk</div>
+              <div class="card-desc">Bahan obrolan agar makin dekat.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Input Form -->
+      <form id="chat-form" class="chat-form">
+        <label for="photo-input" class="btn-photo" title="Unggah foto untuk analisis bahasa tubuh" aria-label="Unggah foto untuk analisis bahasa tubuh">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+            <circle cx="12" cy="13" r="3"/>
+          </svg>
+        </label>
+        <input type="file" id="photo-input" accept="image/*" hidden />
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Tanyakan masalah asmaramu di sini..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit" id="btn-send" aria-label="Kirim pesan">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
